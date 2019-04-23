@@ -1,6 +1,11 @@
 const submitButton = document.getElementById('submit');
-const jackTravel = document.getElementById('jackTravel');
-const jackMusic = document.getElementById('jackTravel');
-const jackActivity = document.getElementById('jackTravel');
+const jackTravelInput = document.getElementById('jackTravel');
+const jackMusicInput = document.getElementById('jackMusic');
+const jackActivityInput = document.getElementById('jackActivity');
 
-console.log(submitButton, jackTravel, jackMusic, jackActivity);
+submitButton.addEventListener('click', () => {
+  const travelAnswer = jackTravelInput.value;
+  const musicAnswer = jackMusicInput.value;
+  const activityAnswer = jackActivityInput.value;
+  console.log(travelAnswer, musicAnswer, activityAnswer);
+});
