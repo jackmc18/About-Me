@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu');
+
 img {
   max-width: 400px;
   padding: 10px;
@@ -6,8 +8,10 @@ img {
 body {
   background-color: #519872;
   margin: 10px;
+  font-family: Roboto, sans-serif;
 }
 
 h1, h2 {
   color: #34252F;
+  font-family: Ubuntu, sans-serif;
 }
