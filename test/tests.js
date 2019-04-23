@@ -4,12 +4,14 @@ function quizScore(travelAnswer, musicAnswer, activityAnswer) {
   let score = 0;
 
   travelAnswer = travelAnswer.toLowerCase();
+  travelAnswer = travelAnswer.replace(',', '');
   musicAnswer = musicAnswer.toLowerCase();
   activityAnswer = activityAnswer.toLowerCase();
 
-  if(travelAnswer === 'leland, michigan' || travelAnswer === 'vail, colorado' || 
-  travelAnswer === 'munich, germany' || travelAnswer === 'innsbruck, austria' || 
-  travelAnswer === 'venice, italy') {
+
+  if(travelAnswer === 'leland michigan' || travelAnswer === 'vail colorado' || 
+  travelAnswer === 'munich germany' || travelAnswer === 'innsbruck austria' || 
+  travelAnswer === 'venice italy') {
     score++;
   }
 
@@ -82,5 +84,21 @@ test('two entries are correct with bad capitalization expecting 2', assert => {
   //Assert
   assert.equal(score, expect);
 });
+
+test('All entries are correct but the travelAnswer is missing punctuation expecting 3', assert => {
+  //Arrange
+  // Set up your parameters and expectations
+  const travelAnswer = 'vail colorado';
+  const musicAnswer = 'Mac Miller';
+  const activityAnswer = 'lacrosse';
+  const expect = 3;
+  //Act 
+  // Call the function you're testing and set the result to a const
+  const score = quizScore(travelAnswer, musicAnswer, activityAnswer);
+  //Assert
+  assert.equal(score, expect);
+});
+
+
 
 
