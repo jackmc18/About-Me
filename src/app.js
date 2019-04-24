@@ -1,3 +1,5 @@
+import quizScore from './quizScore.js';
+
 const submitButton = document.getElementById('submit');
 const jackTravelInput = document.getElementById('jackTravel');
 const jackMusicInput = document.getElementById('jackMusic');
@@ -7,5 +9,10 @@ submitButton.addEventListener('click', () => {
   const travelAnswer = jackTravelInput.value;
   const musicAnswer = jackMusicInput.value;
   const activityAnswer = jackActivityInput.value;
-  console.log(travelAnswer, musicAnswer, activityAnswer);
+
+  let score = 0;
+
+  score = quizScore(travelAnswer, musicAnswer, activityAnswer);
+
+  console.log(score);
 });
