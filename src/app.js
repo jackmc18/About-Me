@@ -11,8 +11,11 @@ submitButton.addEventListener('click', () => {
   const activityAnswer = jackActivityInput.value;
 
   let score = 0;
+  let scoreEl = document.getElementById('score');
 
   score = quizScore(travelAnswer, musicAnswer, activityAnswer);
+
+  scoreEl.textContent = 'Your score: ' + score + '/3';
 
   console.log(score);
 });
