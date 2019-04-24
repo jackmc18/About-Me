@@ -13,9 +13,11 @@ submitButton.addEventListener('click', () => {
   let score = 0;
   let scoreEl = document.getElementById('score');
 
-  score = quizScore(travelAnswer, musicAnswer, activityAnswer);
+  if(travelAnswer.trim() === '' || musicAnswer.trim() === '' || activityAnswer.trim() === ''){
+    scoreEl.textContent = 'Please fill in all answers before submitting.';
+  } else {
+    score = quizScore(travelAnswer, musicAnswer, activityAnswer);
 
-  scoreEl.textContent = 'Your score: ' + score + '/3';
-
-  console.log(score);
+    scoreEl.textContent = 'Your score: ' + score + '/3';
+  }
 });
