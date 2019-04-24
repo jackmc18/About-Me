@@ -15,3 +15,30 @@ h1, h2 {
   color: #34252F;
   font-family: Ubuntu, sans-serif;
 }
+
+label, input, button {
+  display: block;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+button {
+  height: 30px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.good {
+  color: green;
+}
+
+.bad {
+  color: red;
+}
