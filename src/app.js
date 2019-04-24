@@ -18,6 +18,6 @@ submitButton.addEventListener('click', () => {
   } else {
     score = quizScore(travelAnswer, musicAnswer, activityAnswer);
 
-    scoreEl.textContent = 'Your score: ' + score + '/3';
+    scoreEl.textContent = 'Your score: ' + score + '/3' + ' and your percentage: ' + (score / 3) * 100 + '%';
   }
 });
