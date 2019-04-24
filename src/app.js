@@ -17,12 +17,13 @@ submitButton.addEventListener('click', () => {
   let score = 0;
   let scoreEl = document.getElementById('score');
 
-  if(travelAnswer.trim() === '' || musicAnswer.trim() === '' || activityAnswer.trim() === ''){
+  if(travelAnswer.trim() === '' || musicAnswer.trim() === '' || activityAnswer.trim() === '' || 
+  schoolAnswer.trim() === '' || ageAnswer.trim() === ''){
     scoreEl.textContent = 'Please fill in all answers before submitting.';
   } else {
-    score = quizScore(travelAnswer, musicAnswer, activityAnswer);
+    score = quizScore(travelAnswer, musicAnswer, activityAnswer, schoolAnswer, ageAnswer);
     
-    if(score >= 2) {
+    if(score >= 3) {
       scoreEl.classList.add('good');
       scoreEl.classList.remove('bad');
     } else {
@@ -30,6 +31,6 @@ submitButton.addEventListener('click', () => {
       scoreEl.classList.add('bad');
     }
 
-    scoreEl.textContent = 'Your score: ' + score + '/3' + ' and your percentage: ' + (score / 3) * 100 + '%';
+    scoreEl.textContent = 'Your score: ' + score + '/5' + ' and your percentage: ' + (score / 5) * 100 + '%';
   }
 });
