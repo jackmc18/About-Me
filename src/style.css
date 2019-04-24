@@ -16,7 +16,7 @@ h1, h2 {
   font-family: Ubuntu, sans-serif;
 }
 
-label, input {
+label, input, button {
   display: block;
 }
 
@@ -32,4 +32,5 @@ input {
 button {
   height: 30px;
   width: 100px;
+  margin-bottom: 10px;
 }
